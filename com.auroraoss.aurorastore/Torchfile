@@ -1,15 +1,15 @@
 # Torchfiles and Tunnelfiles use a simple syntax called Pebble. More info about Pebble can be found in the Underground docs.
 # I tried to comment the code, but this is all we have, except for the docs, of course.
 
-name.external: "Aurora Store" # string
-name.internal: "com.auroraoss.aurorastore" # string
+name-external: "Aurora Store" # string
+name-internal: "com.auroraoss.aurorastore" # string
 license: "GNU General Public License, version 3" # string
 platform: aosp # value, see docs
 version: "Latest (Pulled from the official releases URL)" # string
 file: "https://files.auroraoss.com/AuroraStore/Stable/AuroraStore_4.0.7.apk" # Direct URL to the application executable.
-install.action.type: onDownload # Runs install.action as soon as the file is finished downloading.
-install.action: installAPK_nativeUI # Opens up the system dialogue to install the downloaded .apk file.
-torchfile.version: 1 # Don't change this unless the torchfile specification gets officially updated. We support custom indexes (torch- and tunnel- files) 
+install-action-type: onDownload # Runs install.action as soon as the file is finished downloading.
+install-action: installAPK_nativeUI # Opens up the system dialogue to install the downloaded .apk file.
+pebble-version: 1 # Don't change this unless the Pebble specification gets officially updated. We support custom indexes (torch- and tunnel- files) 
 # using the next line.
-use.custom.index: false # standard Boolean value. You shouldn't normally need to change this.
-custom.index.spec: "https://custom-specs.example.com/spec/1.ugspec" # another direct URL. .ugspec files are written in Pebble like other Underground core files. See the docs for more info.
+use-custom-index: false # standard Boolean value. You shouldn't normally need to change this.
+custom-index-spec: "https://custom-specs.example.com/spec/1.ugspec" # another direct URL. .ugspec files are written in Pebble like other Underground core files. See the docs for more info.
