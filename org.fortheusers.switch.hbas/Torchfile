@@ -1,0 +1,15 @@
+# Torchfiles and Tunnelfiles use a simple syntax called Pebble. More info about Pebble can be found in the Underground docs.
+# I tried to comment the code, but this is all we have, except for the docs, of course.
+
+name-external: "HB App Store" # string
+name-internal: "org.fortheusers.switch.hbas" # string
+license: "GNU General Public License, version 3" # string
+platform: nx # value, see docs
+version: "2.2" # string
+file: "https://github.com/fortheusers/hb-appstore/releases/download/2.2/appstore.nro" # Direct URL to the application executable.
+install-action-type: onDownload # Runs install.action as soon as the file is finished downloading.
+install-action: installNRO_ams # Uses Atmosphere's native utils to install an NRO.
+pebble-version: 1 # Don't change this unless the Pebble specification gets officially updated. We support custom indexes (torch- and tunnel- files) 
+# using the next line.
+use-custom-index: false # standard Boolean value. You shouldn't normally need to change this.
+custom-index-spec: "https://custom-specs.example.com/spec/1.ugspec" # another direct URL. .ugspec files are written in Pebble like other Underground core files. See the docs for more info.
